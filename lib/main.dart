@@ -61,41 +61,15 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             
-            Container(
-              height: 500,
-              width: 500,
-              color: Colors.grey,
-              child: Text('test my text'),
-              
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            const Text(
-              'You have pushed the button this many times:', style: TextStyle(fontSize: 48, color: Color.fromARGB(255, 214, 11, 221),), 
-            ),
-      
-const Text(' this is my first code i am running', style: TextStyle(fontSize: 32.0,),selectionColor: Color.fromARGB(0, 6, 236, 198),),
-  Container(
-              height: 100,
-              width: 100,
-              color: Colors.grey,
-            ),
+            
 
+Image.asset('assests/img/healthit-logo.png'),
+Image.asset('assests/img/healthit-logo.png'),
 
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
