@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Health-It',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
     
@@ -65,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 500,
               width: 500,
               color: Colors.grey,
+              child: Text('test my text'),
               
             ),
             Text(
