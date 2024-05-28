@@ -50,9 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
        
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       
-        title: Text(widget.title),
+        // title: Text(widget.title),
       ),
       body: Center(
     
@@ -63,8 +63,9 @@ class _MyHomePageState extends State<MyHomePage> {
             
             
 
-Image.asset('assests/img/healthit-logo.png'),
-Image.asset('assests/img/healthit-logo.png'),
+// Image.asset('assests/img/healthit-logo.png'),
+Image.asset('assests/img/healthit-icon.png', width: 200, height: 200,),
+
 
           ],
         ),
