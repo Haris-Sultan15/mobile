@@ -51,13 +51,14 @@ class IndexPage extends StatelessWidget {
                   );
                 }, 
                 child: Text('go page to homepage'),),
-                
+
           ElevatedButton(onPressed: () {
 Navigator.push(
   context, MaterialPageRoute(builder: (context) => const DoctorPage()),
 );
 
           }, child: Text('my button one'))
+          
           ],
         ),
       ),
