@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final response = await http.get(Uri.parse('https://demolab2.hospogate.com/api/countries'));
     if (response.statusCode == 200) {
       setState(() {
-        countries = json.decode(response.body);
+        countries = json.decode(response.body)['data']; // Check the structure of the JSON response
         isLoading = false;
       });
     } else {
@@ -77,14 +77,14 @@ class _MyHomePageState extends State<MyHomePage> {
                               fit: BoxFit.cover,
                             ),
                           ),
-                          title: Text(country['name']),
+                          title: Text(country['name'] ?? 'Unknown'),
                           subtitle: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Country Code: ${country['code']}'),
-                              Text('Capital: ${country['capital']}'),
-                              Text('Region: ${country['region']}'),
-                              Text('Subregion: ${country['subregion']}'),
+                              Text('Country Code: ${country['code'] ?? 'N/A'}'),
+                              Text('Capital: ${country['capital'] ?? 'N/A'}'),
+                              Text('Region: ${country['region'] ?? 'N/A'}'),
+                              Text('Subregion: ${country['subregion'] ?? 'N/A'}'),
                             ],
                           ),
                         ),
