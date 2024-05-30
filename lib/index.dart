@@ -42,12 +42,18 @@ class IndexPage extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const MyApp()));
             },
              child: Text('Go To Homepage')),
-             
+               InkWell(
+            onDoubleTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const DoctorPage()));
+            },
+             child: Text('i am inkwell widget please double tap on me')
+          ),
              ElevatedButton
                 (onPressed: () {
                   Navigator.pop
                   (context, 
                   MaterialPageRoute(builder: (context) => const MyApp()),
+                  
                   );
                 }, 
                 child: Text('go page to homepage'),),
@@ -57,7 +63,8 @@ Navigator.push(
   context, MaterialPageRoute(builder: (context) => const DoctorPage()),
 );
 
-          }, child: Text('my button one'))
+          }, child: Text('my button one')),
+        
           
           ],
         ),
