@@ -42,10 +42,20 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> fetchCountries() async {
     final response = await http.get(Uri.parse('https://demolab2.hospogate.com/api/countries'));
     if (response.statusCode == 200) {
-      setState(() {
-        countries = json.decode(response.body)['data']; // Check the structure of the JSON response
-        isLoading = false;
-      });
+      final jsonResponse = json.decode(response.body);
+
+      // Check if the JSON response contains a 'data' key
+      if (jsonResponse is Map<String, dynamic> && jsonResponse.containsKey('data')) {
+        setState(() {
+          countries = jsonResponse['data'];
+          isLoading = false;
+        });
+      } else {
+        setState(() {
+          countries = jsonResponse;
+          isLoading = false;
+        });
+      }
     } else {
       throw Exception('Failed to load countries');
     }
@@ -66,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     itemCount: countries.length,
                     itemBuilder: (context, index) {
                       final country = countries[index];
+
                       return Card(
                         margin: const EdgeInsets.all(8.0),
                         child: ListTile(
@@ -82,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Country Code: ${country['code'] ?? 'N/A'}'),
-                              Text('Capital: ${country['capital'] ?? 'N/A'}'),
+                              Text('Capital: ${country['capital'] ?? 'Not Available'}'),
                               Text('Region: ${country['region'] ?? 'N/A'}'),
                               Text('Subregion: ${country['subregion'] ?? 'N/A'}'),
                             ],
