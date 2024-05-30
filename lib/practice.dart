@@ -14,18 +14,38 @@ class PracticePage extends StatelessWidget {
         title: const Text('Practice Page'),
       ),
       body: Center(
-        child:Container(
-          height: 200,
-          width: 200,
-        color: Colors.amber,
-
-        )
-        // child: const Text(
-        //   'This is the Practice Page!',
-        //   style: TextStyle(fontSize: 24),
-        // ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.amber,
+              child: Padding(
+                padding: EdgeInsets.all(24),
+                child: Text(
+                    'Added null safety checks for the country attributes to avoid errors in case any of the fields are missing.'),
+              ),
+            ),
+            SizedBox(height: 16),  // Add some spacing between the containers
+            InkWell(
+              onDoubleTap: () {
+Navigator.push(context, MaterialPageRoute(builder: (context) => DoctorPage()));
+              } ,
+              
+              child:Container(
+              height: 200,
+              width: 200,
+              color: Colors.amber,
+              child: Padding(
+                padding: EdgeInsets.all(24),
+                child: Text(
+                    'Added null safety checks for the country attributes to avoid errors in case any of the fields are missing.'),
+              ),
+            ),) 
+          ],
+        ),
       ),
-      
     );
   }
 }

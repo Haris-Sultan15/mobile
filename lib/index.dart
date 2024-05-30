@@ -65,7 +65,7 @@ class IndexPage extends StatelessWidget {
                   },
                   child: Text('Double Tap on me'),
                 ),
-
+SizedBox(height: 16),
           ElevatedButton(onPressed: () {
 Navigator.push(
   context, MaterialPageRoute(builder: (context) => const PracticePage()),
