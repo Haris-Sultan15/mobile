@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/index.dart';
 import 'package:flutter_application_1/main.dart';
 
 class DoctorPage extends StatelessWidget {
@@ -19,12 +20,16 @@ class DoctorPage extends StatelessWidget {
               'Welcome to the Index Page!',
               style: TextStyle(fontSize: 24),
             ),
+             
             SizedBox(height: 20),
             Text(
               'This is a new page created in the app.',
               style: TextStyle(fontSize: 16),
             ),
                 Text('this is my text i am going to practice this text'),
+              
+
+
                 // ElevatedButton
                 // (onPressed: () {
                 //   Navigator.pop
