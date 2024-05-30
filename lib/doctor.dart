@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/index.dart';
 import 'package:flutter_application_1/main.dart';
+import 'package:flutter_application_1/practice.dart';
 
 class DoctorPage extends StatelessWidget {
   const DoctorPage({Key? key}) : super(key: key);

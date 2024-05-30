@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/doctor.dart';
 import 'package:flutter_application_1/main.dart';
+import 'package:flutter_application_1/practice.dart';
 
 class IndexPage extends StatelessWidget {
   const IndexPage({Key? key}) : super(key: key);
@@ -67,10 +68,10 @@ class IndexPage extends StatelessWidget {
 
           ElevatedButton(onPressed: () {
 Navigator.push(
-  context, MaterialPageRoute(builder: (context) => const DoctorPage()),
+  context, MaterialPageRoute(builder: (context) => const PracticePage()),
 );
 
-          }, child: Text('my button one')),
+          }, child: Text('Go to practice page')),
         
           
           ],

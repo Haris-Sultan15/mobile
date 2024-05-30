@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'index.dart'; 
-import 'doctor.dart'; // Import the new page
+import 'doctor.dart';
+import 'practice.dart'; // Import the new page
 
 void main() {
   runApp(const MyApp());
