@@ -27,9 +27,9 @@ class PracticePage extends StatelessWidget {
                   },
                   child: Container(
                     height: 100,
-                    width: MediaQuery.of(context).size.width / 3 - 16,
+                    width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
-                      color: Colors.amber,
+                      color: Color.fromARGB(255, 255, 255, 255),
                       border: Border.all(color: Colors.grey, width: 1),
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -55,9 +55,9 @@ class PracticePage extends StatelessWidget {
                   },
                   child: Container(
                     height: 100,
-                    width: MediaQuery.of(context).size.width / 3 - 16,
+                    width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
-                      color: Colors.amber,
+                     color: Color.fromARGB(255, 255, 255, 255),
                       border: Border.all(color: Colors.grey, width: 1),
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -82,16 +82,16 @@ class PracticePage extends StatelessWidget {
                   },
                   child: Container(
                     height: 100,
-                    width: MediaQuery.of(context).size.width / 3 - 16,
+                    width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 23, 3, 201),
+                       color: Color.fromARGB(255, 255, 255, 255),
                       border: Border.all(color: Colors.grey, width: 1),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.all(24),
                       child: Text(
-                        'Box 3: Added null safety checks for the country attributes to avoid errors in case any of the fields are missing.',
+                        'Labortery',
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -109,16 +109,16 @@ class PracticePage extends StatelessWidget {
                   },
                   child: Container(
                     height: 100,
-                    width: MediaQuery.of(context).size.width / 3 - 16,
+                    width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
-                      color: Colors.amber,
+                       color: Color.fromARGB(255, 255, 255, 255),
                       border: Border.all(color: Colors.grey, width: 1),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.all(24),
                       child: Text(
-                        'Box 4: Added null safety checks for the country attributes to avoid errors in case any of the fields are missing.',
+                        'Pharmacies',
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -136,9 +136,9 @@ class PracticePage extends StatelessWidget {
                   },
                   child: Container(
                     height: 100,
-                    width: MediaQuery.of(context).size.width / 3 - 16,
+                    width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
-                      color: Colors.amber,
+                       color: Color.fromARGB(255, 255, 255, 255),
                       border: Border.all(color: Colors.grey, width: 1),
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -163,9 +163,9 @@ class PracticePage extends StatelessWidget {
                   },
                   child: Container(
                     height: 100,
-                    width: MediaQuery.of(context).size.width / 3 - 16,
+                    width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
-                      color: Colors.amber,
+                       color: Color.fromARGB(255, 255, 255, 255),
                       border: Border.all(color: Colors.grey, width: 1),
                       borderRadius: BorderRadius.circular(8),
                     ),
