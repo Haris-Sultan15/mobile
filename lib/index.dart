@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/doctor.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/practice.dart';
+import 'package:country_picker/country_picker.dart';
+import 'counteries.dart';
+
 
 class IndexPage extends StatelessWidget {
   const IndexPage({Key? key}) : super(key: key);
@@ -53,11 +56,11 @@ class IndexPage extends StatelessWidget {
                 (onPressed: () {
                   Navigator.pop
                   (context, 
-                  MaterialPageRoute(builder: (context) => const MyHomePage()),
+                  MaterialPageRoute(builder: (context) => const CountriesPage()),
                   
                   );
                 }, 
-                child: Text('go page to homepage'),),
+                child: Text('Select Country'),),
 
                  InkWell(
                   onTap: () {
@@ -72,6 +75,12 @@ Navigator.push(
 );
 
           }, child: Text('Go to practice page')),
+            ElevatedButton(onPressed: () {
+Navigator.push(
+  context, MaterialPageRoute(builder: (context) => const CountriesPage()),
+);
+
+          }, child: Text('Select Your Country')),
         
           
           ],
