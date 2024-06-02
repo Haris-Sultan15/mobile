@@ -26,11 +26,12 @@ class PracticePage extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    height: 120,
+                    height: 100,
                     width: MediaQuery.of(context).size.width / 3 - 16,
                     decoration: BoxDecoration(
                       color: Colors.amber,
                       border: Border.all(color: Colors.grey, width: 1),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.all(24),
@@ -53,11 +54,12 @@ class PracticePage extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    height: 120,
+                    height: 100,
                     width: MediaQuery.of(context).size.width / 3 - 16,
                     decoration: BoxDecoration(
                       color: Colors.amber,
                       border: Border.all(color: Colors.grey, width: 1),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.all(24),
@@ -79,11 +81,12 @@ class PracticePage extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    height: 120,
+                    height: 100,
                     width: MediaQuery.of(context).size.width / 3 - 16,
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 23, 3, 201),
                       border: Border.all(color: Colors.grey, width: 1),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.all(24),
@@ -105,11 +108,12 @@ class PracticePage extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    height: 120,
+                    height: 100,
                     width: MediaQuery.of(context).size.width / 3 - 16,
                     decoration: BoxDecoration(
                       color: Colors.amber,
                       border: Border.all(color: Colors.grey, width: 1),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.all(24),
@@ -131,11 +135,12 @@ class PracticePage extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    height: 120,
+                    height: 100,
                     width: MediaQuery.of(context).size.width / 3 - 16,
                     decoration: BoxDecoration(
                       color: Colors.amber,
                       border: Border.all(color: Colors.grey, width: 1),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.all(24),
@@ -157,11 +162,12 @@ class PracticePage extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    height: 120,
+                    height: 100,
                     width: MediaQuery.of(context).size.width / 3 - 16,
                     decoration: BoxDecoration(
                       color: Colors.amber,
                       border: Border.all(color: Colors.grey, width: 1),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.all(24),
