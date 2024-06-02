@@ -40,9 +40,9 @@ class IndexPage extends StatelessWidget {
             {
               Navigator.pop(
                 context,
-                MaterialPageRoute(builder: (context) => const MyHomePage()));
+                MaterialPageRoute(builder: (context) => const PracticePage()));
             },
-             child: Text('Go To Homepage')),
+             child: Text('Go To Practice Page')),
                InkWell(
             onDoubleTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const DoctorPage()));
