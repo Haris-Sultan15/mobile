@@ -86,7 +86,7 @@ class PracticePage extends StatelessWidget {
                   height: 54,
                   width: 54,
                 ),
-                SizedBox(height: 8), // Space between image and text
+                SizedBox(height: 8), 
                 Text(
                   title,
                   textAlign: TextAlign.center,
