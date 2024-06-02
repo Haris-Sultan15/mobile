@@ -171,6 +171,7 @@ class PracticePage extends StatelessWidget {
                     ),
                     child: const Padding(
                       padding: EdgeInsets.all(12),
+                      
                       child: Text(
                         'Specialist Doctors',
                         textAlign: TextAlign.center,
