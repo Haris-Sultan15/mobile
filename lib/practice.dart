@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/doctor.dart';
 
 class PracticePage extends StatelessWidget {
@@ -16,176 +15,87 @@ class PracticePage extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const DoctorPage()),
-                    );
-                  },
-                  child: Container(
-                    height: 100,
-                    width: MediaQuery.of(context).size.width / 3.5 - 16,
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: .5),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(12),
-                      child: Text(
-                        "Doctors",
-                        textAlign: TextAlign.center,
-  
-                      ),
-                    ),
-                  ),
-                ),
+              // Doctor Card
+              buildCard(
+                context,
+                'assests/img/doctor.png', 
+                'Doctors',
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const DoctorPage()),
-                    );
-                  },
-                  child: Container(
-                    height: 100,
-                    width: MediaQuery.of(context).size.width / 3.5 - 16,
-                    decoration: BoxDecoration(
-                     color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: .5),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(12),
-                      child: Text(
-                        'Hospitals',
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
+              // Hospital Card
+              buildCard(
+                context,
+                'assests/img/Hospitals.png', 
+                'Hospitals',
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const DoctorPage()),
-                    );
-                  },
-                  child: Container(
-                    height: 100,
-                    width: MediaQuery.of(context).size.width / 3.5 - 16,
-                    decoration: BoxDecoration(
-                       color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: .5),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(12),
-                      child: Text(
-                        'Labortery',
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
+              // Laboratory Card
+              buildCard(
+                context,
+                'assests/img/labortery.png', 
+                'Laboratory',
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const DoctorPage()),
-                    );
-                  },
-                  child: Container(
-                    height: 100,
-                    width: MediaQuery.of(context).size.width / 3.5 - 16,
-                    decoration: BoxDecoration(
-                       color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: .5),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(12),
-                      child: Text(
-                        'Pharmacies',
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
+              // Pharmacy Card
+              buildCard(
+                context,
+                'assests/img/Pharmacy.png', 
+                'Pharmacy',
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const DoctorPage()),
-                    );
-                  },
-                  child: Container(
-                    height: 100,
-                    width: MediaQuery.of(context).size.width / 3.5 - 16,
-                    decoration: BoxDecoration(
-                       color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: .5),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(12),
-                      child: Text(
-                        'Clinics',
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
+              // Clinic Card
+              buildCard(
+                context,
+                'assests/img/Hospitals.png', 
+                'Clinics',
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const DoctorPage()),
-                    );
-                  },
-                  child: Container(
-                    height: 100,
-                    width: MediaQuery.of(context).size.width / 3.5 - 16,
-                    decoration: BoxDecoration(
-                       color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: .5),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(12),
-                      
-                      child: Text(
-                        'Specialist Doctors',
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
+              // Specialist Doctor Card
+              buildCard(
+                context,
+                'assests/img/doctor.png', 
+                'Doctors',
               ),
             ],
           ),
         ),
-        
       ),
-  
+    );
+  }
+
+  Widget buildCard(BuildContext context, String imagePath, String title) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const DoctorPage()),
+          );
+        },
+        child: Container(
+          height: 100,
+          width: MediaQuery.of(context).size.width / 3.5 - 16,
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 255, 255, 255),
+            border: Border.all(color: Colors.grey, width: 0.5),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(8),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  imagePath,
+                  height: 54,
+                  width: 54,
+                ),
+                SizedBox(height: 8), // Space between image and text
+                Text(
+                  title,
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
