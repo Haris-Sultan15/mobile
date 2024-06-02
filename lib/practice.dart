@@ -19,7 +19,7 @@ class PracticePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: InkWell(
-                  onDoubleTap: () {
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const DoctorPage()),
@@ -35,8 +35,9 @@ class PracticePage extends StatelessWidget {
                     child: const Padding(
                       padding: EdgeInsets.all(24),
                       child: Text(
-                        'Box 1: Avoid errors in case any of the fields are missing.',
+                        "Box 1: Avoid errors in case any of the fields are missing.",
                         textAlign: TextAlign.center,
+  
                       ),
                     ),
                   ),
@@ -45,7 +46,7 @@ class PracticePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: InkWell(
-                  onDoubleTap: () {
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const DoctorPage()),
@@ -71,7 +72,7 @@ class PracticePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: InkWell(
-                  onDoubleTap: () {
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const DoctorPage()),
@@ -97,7 +98,7 @@ class PracticePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: InkWell(
-                  onDoubleTap: () {
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const DoctorPage()),
@@ -123,7 +124,7 @@ class PracticePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: InkWell(
-                  onDoubleTap: () {
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const DoctorPage()),
@@ -149,7 +150,7 @@ class PracticePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: InkWell(
-                  onDoubleTap: () {
+                  onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => const DoctorPage()),
@@ -175,6 +176,7 @@ class PracticePage extends StatelessWidget {
             ],
           ),
         ),
+        
       ),
   
     );
