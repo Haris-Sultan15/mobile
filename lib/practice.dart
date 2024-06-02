@@ -145,7 +145,7 @@ class PracticePage extends StatelessWidget {
                     child: const Padding(
                       padding: EdgeInsets.all(12),
                       child: Text(
-                        'Box 5: Added null safety checks for the country attributes to avoid errors in case any of the fields are missing.',
+                        'Clinics',
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -172,7 +172,7 @@ class PracticePage extends StatelessWidget {
                     child: const Padding(
                       padding: EdgeInsets.all(12),
                       child: Text(
-                        'Box 6: Added null safety checks for the country attributes to avoid errors in case any of the fields are missing.',
+                        'Specialist Doctors',
                         textAlign: TextAlign.center,
                       ),
                     ),
