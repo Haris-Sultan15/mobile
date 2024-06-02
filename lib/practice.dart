@@ -30,11 +30,11 @@ class PracticePage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: 1),
+                      border: Border.all(color: Colors.grey, width: .5),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.all(24),
+                      padding: EdgeInsets.all(12),
                       child: Text(
                         "Doctors",
                         textAlign: TextAlign.center,
@@ -58,11 +58,11 @@ class PracticePage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
                      color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: 1),
+                      border: Border.all(color: Colors.grey, width: .5),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.all(24),
+                      padding: EdgeInsets.all(12),
                       child: Text(
                         'Hospitals',
                         textAlign: TextAlign.center,
@@ -85,11 +85,11 @@ class PracticePage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
                        color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: 1),
+                      border: Border.all(color: Colors.grey, width: .5),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.all(24),
+                      padding: EdgeInsets.all(12),
                       child: Text(
                         'Labortery',
                         textAlign: TextAlign.center,
@@ -112,11 +112,11 @@ class PracticePage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
                        color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: 1),
+                      border: Border.all(color: Colors.grey, width: .5),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.all(24),
+                      padding: EdgeInsets.all(12),
                       child: Text(
                         'Pharmacies',
                         textAlign: TextAlign.center,
@@ -139,11 +139,11 @@ class PracticePage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
                        color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: 1),
+                      border: Border.all(color: Colors.grey, width: .5),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.all(24),
+                      padding: EdgeInsets.all(12),
                       child: Text(
                         'Box 5: Added null safety checks for the country attributes to avoid errors in case any of the fields are missing.',
                         textAlign: TextAlign.center,
@@ -166,11 +166,11 @@ class PracticePage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width / 3.5 - 16,
                     decoration: BoxDecoration(
                        color: Color.fromARGB(255, 255, 255, 255),
-                      border: Border.all(color: Colors.grey, width: 1),
+                      border: Border.all(color: Colors.grey, width: .5),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.all(24),
+                      padding: EdgeInsets.all(12),
                       child: Text(
                         'Box 6: Added null safety checks for the country attributes to avoid errors in case any of the fields are missing.',
                         textAlign: TextAlign.center,
