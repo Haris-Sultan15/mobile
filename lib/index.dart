@@ -17,11 +17,11 @@ class _IndexPageState extends State<IndexPage> {
 
   // List of pages for navigation
   final List<Widget> _pages = [
-    Center(child: Text('Home Page', style: TextStyle(color: const Color.fromARGB(255, 19, 14, 2)),)),
-    Center(child: Text('Doctors', style: TextStyle(color: const Color.fromARGB(255, 19, 14, 2)),)),
-     Center(child: Text('Practice', style: TextStyle(color: const Color.fromARGB(255, 19, 14, 2)),)),
-     Center(child: Text('Countries', style: TextStyle(color: const Color.fromARGB(255, 19, 14, 2)),)),
-      Center(child: Text('Settings', style: TextStyle(color: const Color.fromARGB(255, 19, 14, 2)),)),
+    Center(child: Text('Home Page')),
+    Center(child: Text('Doctors')),
+     Center(child: Text('Practice')),
+     Center(child: Text('Countries')),
+      Center(child: Text('Settings')),
   ];
 
   void _onItemTapped(int index) {
@@ -105,6 +105,7 @@ class _IndexPageState extends State<IndexPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
+
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.medical_services),
@@ -125,6 +126,8 @@ class _IndexPageState extends State<IndexPage> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Color.fromARGB(255, 24, 26, 168),
+        unselectedItemColor: Colors.black,
+        showUnselectedLabels: true,
         onTap: _onItemTapped,
       ),
     );
