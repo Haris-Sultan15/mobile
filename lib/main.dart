@@ -5,6 +5,8 @@ import 'index.dart';
 import 'doctor.dart';
 import 'practice.dart'; // Import the new page
 import 'counteries.dart';
+import 'test.dart';
+
 
 void main() {
   runApp(const MyApp());

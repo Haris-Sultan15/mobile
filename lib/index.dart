@@ -4,6 +4,8 @@ import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/practice.dart';
 import 'package:country_picker/country_picker.dart';
 import 'counteries.dart';
+import 'test.dart';
+
 
 
 class IndexPage extends StatelessWidget {
@@ -39,19 +41,28 @@ class IndexPage extends StatelessWidget {
               child: const Text('Doctors Lists'),
             ),
             
-            ElevatedButton(onPressed: () 
-            {
-              Navigator.pop(
-                context,
-                MaterialPageRoute(builder: (context) => const PracticePage()));
-            },
-             child: Text('Go To Practice Page')),
+            // ElevatedButton(onPressed: () 
+            // {
+            //   Navigator.pop(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => const TestPage()));
+            // },
+            //  child: Text('Go To Practice Page')),
                InkWell(
             onDoubleTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => const DoctorPage()));
             },
              child: Text('i am inkwell widget please double tap on me')
           ),
+              //  ElevatedButton
+              //   (onPressed: () {
+              //     Navigator.pop
+              //     (context, 
+              //     MaterialPageRoute(builder: (context) => const TestPage()),
+                  
+              //     );
+              //   }, 
+              //   child: Text('Test Page'),),
              ElevatedButton
                 (onPressed: () {
                   Navigator.pop
