@@ -5,6 +5,7 @@ import 'index.dart';
 import 'doctor.dart';
 import 'practice.dart'; // Import the new page
 import 'counteries.dart';
+import 'splash.dart';
 
 
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const IndexPage(),
+      home: SplashScreen(),
     );
   }
 }
