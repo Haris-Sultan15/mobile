@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'index.dart'; // Ensure you have a HomeScreen widget in home_screen.dart
+import 'index.dart';
+import 'welcome.dart'; // Ensure you have a HomeScreen widget in home_screen.dart
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -14,19 +15,22 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigateToHome() async {
-    await Future.delayed(Duration(milliseconds: 3000), () {});
+    await Future.delayed(Duration(milliseconds: 2000), () {});
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => IndexPage()),
+      MaterialPageRoute(builder: (context) => WelcomeScreen()),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Image.asset('assests/img/health-icon.png', width: 200, height: 200,),
-         // Your splash icon
+      body: Container(
+        color: Colors.white, // Set background color to white
+        child: Center(
+          child: Image.asset('assests/img/health-icon.png', width: 200, height: 200,),
+          // Your splash icon
+        ),
       ),
     );
   }

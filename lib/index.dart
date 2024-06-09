@@ -4,6 +4,7 @@ import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/practice.dart';
 import 'package:country_picker/country_picker.dart';
 import 'counteries.dart';
+import 'notification.dart';
 
 class IndexPage extends StatefulWidget {
   const IndexPage({Key? key}) : super(key: key);
@@ -19,15 +20,25 @@ class _IndexPageState extends State<IndexPage> {
   final List<Widget> _pages = [
     Center(child: Text('Home Page')),
     Center(child: Text('Doctors')),
-     Center(child: Text('Practice')),
-     Center(child: Text('Countries')),
-      Center(child: Text('Settings')),
+    Center(child: Text('Practice')),
+    Center(child: Text('Countries')),
+    Center(child: Text('Settings')),
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  // Function to show the dialog box
+  void _showDialogBox() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return NotificationScreen();
+      },
+    );
   }
 
   @override
@@ -97,6 +108,10 @@ class _IndexPageState extends State<IndexPage> {
               }, 
               child: Text('Select Your Country')
             ),
+            ElevatedButton(
+              onPressed: _showDialogBox, // Show dialog box on button press
+              child: Text('Show Dialogue Box'),
+            ),
           ],
         ),
       ),
@@ -105,7 +120,6 @@ class _IndexPageState extends State<IndexPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.medical_services),
