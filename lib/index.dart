@@ -5,6 +5,7 @@ import 'package:flutter_application_1/practice.dart';
 import 'package:country_picker/country_picker.dart';
 import 'counteries.dart';
 import 'notification.dart';
+import 'location.dart';
 
 class IndexPage extends StatefulWidget {
   const IndexPage({Key? key}) : super(key: key);
@@ -65,14 +66,14 @@ class _IndexPageState extends State<IndexPage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const DoctorPage()),
+                  MaterialPageRoute(builder: (context) => NotificationScreen()),
                 );
               },
               child: const Text('Doctors Lists'),
             ),
             InkWell(
               onDoubleTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const DoctorPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LocationPermissionScreen()));
               },
               child: Text('I am inkwell widget please double tap on me'),
             ),
@@ -107,10 +108,6 @@ class _IndexPageState extends State<IndexPage> {
                 );
               }, 
               child: Text('Select Your Country')
-            ),
-            ElevatedButton(
-              onPressed: _showDialogBox, // Show dialog box on button press
-              child: Text('Show Dialogue Box'),
             ),
           ],
         ),

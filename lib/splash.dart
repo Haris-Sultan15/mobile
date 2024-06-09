@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'index.dart';
-import 'welcome.dart'; // Ensure you have a HomeScreen widget in home_screen.dart
+import 'welcome.dart'; 
+import 'location.dart';// Ensure you have a HomeScreen widget in home_screen.dart
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(Duration(milliseconds: 2000), () {});
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => WelcomeScreen()),
+      MaterialPageRoute(builder: (context) => LocationPermissionScreen()),
     );
   }
 

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'counteries.dart';
+import 'notification.dart';
 
-class NotificationScreen extends StatelessWidget {
+class LocationPermissionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Notification Permission'),
+        title: Text('Location Permission'),
         centerTitle: true,
         backgroundColor: Colors.white, // Set app bar background color to white
         elevation: 0, // Remove the shadow under the app bar
@@ -20,10 +20,11 @@ class NotificationScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
-              flex: 4, // Adjust flex values to control spacing
+              flex: 4,
+              // Adjust flex values to control spacing
               child: Center(
                 child: Image.asset(
-                  'assests/img/3d-notification.png', // Replace with your image asset path
+                  'assests/img/location.png', // Replace with your image asset path
                   width: 300,
                   height: 300,
                 ),
@@ -34,7 +35,7 @@ class NotificationScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    'Would you like to allow notifications?',
+                    'Would you like to allow location access?',
                     style: TextStyle(fontSize: 18),
                     textAlign: TextAlign.center,
                   ),
@@ -46,7 +47,7 @@ class NotificationScreen extends StatelessWidget {
                         onPressed: () {
                           // Handle "Not Allow" click
                           print('Not Allow clicked');
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesPage() ));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationScreen() ));
                         },
                         child: Text(
                           'Not Allow',
@@ -58,7 +59,7 @@ class NotificationScreen extends StatelessWidget {
                         onPressed: () {
                           // Handle "Allow" click
                           print('Allow clicked');
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesPage() ));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationScreen() ));
                         },
                         child: Text(
                           'Allow',
