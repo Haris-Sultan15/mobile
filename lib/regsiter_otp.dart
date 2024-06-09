@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'index.dart';
+import 'location.dart';
 
 class RegistrationOTP extends StatefulWidget {
   @override
@@ -104,7 +105,7 @@ class _RegistrationOTPState extends State<RegistrationOTP> {
                 if (otpError == null) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => IndexPage()),
+                    MaterialPageRoute(builder: (context) => LocationPermissionScreen()),
                   );
                 }
               },

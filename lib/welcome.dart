@@ -49,11 +49,21 @@ class WelcomeScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => IndexPage()),
                     );
                   },
-                  child: Text(
-                    'Already have an account? Login',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black,
+                  child: RichText(
+                    text: TextSpan(
+                      text: 'Already have an account? ',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.black,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'Login',
+                          style: TextStyle(
+                            color: Color(0xFF059B85),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

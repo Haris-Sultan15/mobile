@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'counteries.dart';
+import 'index.dart';
 
 class NotificationScreen extends StatelessWidget {
   @override
@@ -46,7 +46,7 @@ class NotificationScreen extends StatelessWidget {
                         onPressed: () {
                           // Handle "Not Allow" click
                           print('Not Allow clicked');
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesPage() ));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => IndexPage() ));
                         },
                         child: Text(
                           'Not Allow',
@@ -58,7 +58,7 @@ class NotificationScreen extends StatelessWidget {
                         onPressed: () {
                           // Handle "Allow" click
                           print('Allow clicked');
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => CountriesPage() ));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => IndexPage() ));
                         },
                         child: Text(
                           'Allow',

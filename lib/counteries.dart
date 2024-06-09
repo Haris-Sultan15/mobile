@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter_application_1/index.dart';
 import 'package:flutter_application_1/practice.dart';
-import 'welcome.dart';
+import 'language.dart';
 
 class CountriesPage extends StatefulWidget {
   const CountriesPage({Key? key}) : super(key: key);
@@ -68,7 +68,7 @@ class _CountriesPageState extends State<CountriesPage> {
                         onPressed: () {
                           // Handle "Allow" click
                           print('Allow clicked');
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomeScreen() ));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LanguagePage() ));
                         },
                         child: Text(
                           'Next',
