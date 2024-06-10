@@ -8,7 +8,7 @@ import 'counteries.dart';
 import 'notification.dart';
 import 'location.dart';
 import 'language.dart';
-
+import 'top-specialties.dart';
 class IndexPage extends StatefulWidget {
   const IndexPage({Key? key}) : super(key: key);
 
@@ -237,7 +237,7 @@ class _IndexPageState extends State<IndexPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const DoctorPage()),
+                                  builder: (context) => TopSpecialtiesScreen()),
                             );
                           },
                           child: Column(
