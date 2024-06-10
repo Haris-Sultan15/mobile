@@ -23,7 +23,7 @@ class NotificationScreen extends StatelessWidget {
               flex: 4, // Adjust flex values to control spacing
               child: Center(
                 child: Image.asset(
-                  'assests/img/3d-notification.png', // Replace with your image asset path
+                  'assests/img/notification.png', // Replace with your image asset path
                   width: 300,
                   height: 300,
                 ),

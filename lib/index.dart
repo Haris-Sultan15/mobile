@@ -175,187 +175,206 @@ class _IndexPageState extends State<IndexPage> {
                 ],
               ),
             ),
-Padding(
-  padding: const EdgeInsets.all(8.0),
-  child: SingleChildScrollView(
-    scrollDirection: Axis.horizontal,
-    child: Row(
-      children: [
-        // Manual creation of cards
-           Card(
-  margin: EdgeInsets.all(8.0),
-  color:Colors.white,
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(8.0),
-    side: BorderSide(color: Colors.grey[300]!), // Add border color here
-  ),
-  child: SizedBox(
-   
-    height: 80,
-    width: MediaQuery.of(context).size.width / 4 - 16,
-    child: InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const DoctorPage()),
-        );
-      },
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        
-        children: [
-          Image.asset(
-            'assests/img/derma.png', // Replace with your image asset path
-          ),
-          SizedBox(height: 5,),
-          Text(
-                    'Dermatology',
-                    style: TextStyle(fontSize: 12),
-                  ),
-        ],
-      ),
-    ),
-  ),
-),
-        // Add more cards here as needed
-        // Example:
-       Card(
-  margin: EdgeInsets.all(8.0),
-  color:Colors.white,
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(8.0),
-    side: BorderSide(color: Colors.grey[300]!), // Add border color here
-  ),
-  child: SizedBox(
-   
-    height: 80,
-    width: MediaQuery.of(context).size.width / 4 - 16,
-    child: InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const DoctorPage()),
-        );
-      },
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        
-        children: [
-          Image.asset(
-            'assests/img/derma.png', // Replace with your image asset path
-          ),
-          SizedBox(height: 5,),
-          Text('Oncology', style: TextStyle(fontSize: 12),),
-        ],
-      ),
-    ),
-  ),
-),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    // Manual creation of cards
+                    Card(
+                      margin: EdgeInsets.all(8.0),
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                        side: BorderSide(
+                            color: Colors.grey[300]!), // Add border color here
+                      ),
+                      child: SizedBox(
+                        height: 80,
+                        width: MediaQuery.of(context).size.width / 4 - 16,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DoctorPage()),
+                            );
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assests/img/derma.png', // Replace with your image asset path
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'Dermatology',
+                                style: TextStyle(fontSize: 12),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    // Add more cards here as needed
+                    // Example:
+                    Card(
+                      margin: EdgeInsets.all(8.0),
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                        side: BorderSide(
+                            color: Colors.grey[300]!), // Add border color here
+                      ),
+                      child: SizedBox(
+                        height: 80,
+                        width: MediaQuery.of(context).size.width / 4 - 16,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DoctorPage()),
+                            );
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assests/img/derma.png', // Replace with your image asset path
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'Oncology',
+                                style: TextStyle(fontSize: 12),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
 
-       Card(
-  margin: EdgeInsets.all(8.0),
-  color:Colors.white,
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(8.0),
-    side: BorderSide(color: Colors.grey[300]!), // Add border color here
-  ),
-  child: SizedBox(
-   
-    height: 80,
-    width: MediaQuery.of(context).size.width / 4 - 16,
-    child: InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const DoctorPage()),
-        );
-      },
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        
-        children: [
-          Image.asset(
-            'assests/img/derma.png', // Replace with your image asset path
-          ),
-          SizedBox(height: 5,),
-          Text('Orthopedics', style: TextStyle(fontSize: 12),),
-        ],
-      ),
-    ),
-  ),
-),
-         Card(
-  margin: EdgeInsets.all(8.0),
-  color:Colors.white,
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(8.0),
-    side: BorderSide(color: Colors.grey[300]!), // Add border color here
-  ),
-  child: SizedBox(
-   
-    height: 80,
-    width: MediaQuery.of(context).size.width / 4 - 16,
-    child: InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const DoctorPage()),
-        );
-      },
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        
-        children: [
-          Image.asset(
-            'assests/img/derma.png', // Replace with your image asset path
-          ),
-          SizedBox(height: 5,),
-          Text('Dermatology', style: TextStyle(fontSize: 12),),
-        ],
-      ),
-    ),
-  ),
-),
-         Card(
-  margin: EdgeInsets.all(8.0),
-  color:Colors.white,
-  shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(8.0),
-    side: BorderSide(color: Colors.grey[300]!), // Add border color here
-  ),
-  child: SizedBox(
-   
-    height: 80,
-    width: MediaQuery.of(context).size.width / 4 - 16,
-    child: InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const DoctorPage()),
-        );
-      },
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        
-        children: [
-          Image.asset(
-            'assests/img/derma.png', // Replace with your image asset path
-          ),
-          SizedBox(height: 5,),
-          Text('Dermatology', style: TextStyle(fontSize: 12),),
-        ],
-      ),
-    ),
-  ),
-),
-        // Repeat the above structure for more cards
-      ],
-    ),
-  ),
-),
-
-
-
+                    Card(
+                      margin: EdgeInsets.all(8.0),
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                        side: BorderSide(
+                            color: Colors.grey[300]!), // Add border color here
+                      ),
+                      child: SizedBox(
+                        height: 80,
+                        width: MediaQuery.of(context).size.width / 4 - 16,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DoctorPage()),
+                            );
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assests/img/derma.png', // Replace with your image asset path
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'Orthopedics',
+                                style: TextStyle(fontSize: 12),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.all(8.0),
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                        side: BorderSide(
+                            color: Colors.grey[300]!), // Add border color here
+                      ),
+                      child: SizedBox(
+                        height: 80,
+                        width: MediaQuery.of(context).size.width / 4 - 16,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DoctorPage()),
+                            );
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assests/img/derma.png', // Replace with your image asset path
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'Dermatology',
+                                style: TextStyle(fontSize: 12),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin: EdgeInsets.all(8.0),
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                        side: BorderSide(
+                            color: Colors.grey[300]!), // Add border color here
+                      ),
+                      child: SizedBox(
+                        height: 80,
+                        width: MediaQuery.of(context).size.width / 4 - 16,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DoctorPage()),
+                            );
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assests/img/derma.png', // Replace with your image asset path
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'Dermatology',
+                                style: TextStyle(fontSize: 12),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    // Repeat the above structure for more cards
+                  ],
+                ),
+              ),
+            ),
 
             Padding(
               padding: const EdgeInsets.all(8.0),
