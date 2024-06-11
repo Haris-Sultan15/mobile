@@ -9,6 +9,7 @@ import 'notification.dart';
 import 'location.dart';
 import 'language.dart';
 import 'top-specialties.dart';
+import 'doctorprofile.dart';
 class IndexPage extends StatefulWidget {
   const IndexPage({Key? key}) : super(key: key);
 
@@ -237,7 +238,7 @@ class _IndexPageState extends State<IndexPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => TopSpecialtiesScreen()),
+                                  builder: (context) => DoctorProfileScreen()),
                             );
                           },
                           child: Column(
@@ -250,7 +251,7 @@ class _IndexPageState extends State<IndexPage> {
                                 height: 5,
                               ),
                               Text(
-                                'Oncology',
+                                'Oncologfffy',
                                 style: TextStyle(fontSize: 12),
                               ),
                             ],
