@@ -14,11 +14,10 @@ class _TopSpecialtiesScreenState extends State<TopSpecialtiesScreen> {
         backgroundColor: Colors.white,
         elevation: 1.0,
         title: Text(
-          'Top Specialties',
+          'Oncology Doctor List',
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
-        
         iconTheme: IconThemeData(color: Colors.black),
       ),
       body: Column(
@@ -41,10 +40,11 @@ class _TopSpecialtiesScreenState extends State<TopSpecialtiesScreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      FilterButton(label: 'Filter 1', icon: Icons.filter_list),
-                      FilterButton(label: 'Filter 2'),
-                      FilterButton(label: 'Filter 3'),
-                      FilterButton(label: 'Filter 4'),
+                      FilterButton(label: 'All Filters', icon: Icons.filter_list),
+                      FilterButton(label: 'Lowest Fee'),
+                      FilterButton(label: 'Near Me'),
+                      FilterButton(label: 'Female'),
+                      FilterButton(label: 'Available Now'),
                     ],
                   ),
                 ),
@@ -52,15 +52,7 @@ class _TopSpecialtiesScreenState extends State<TopSpecialtiesScreen> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    'Headline',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                SizedBox(height: 5),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Sub text',
+                    '148 Result Found',
                     style: TextStyle(fontSize: 14, color: Colors.grey),
                   ),
                 ),
@@ -72,33 +64,33 @@ class _TopSpecialtiesScreenState extends State<TopSpecialtiesScreen> {
               children: [
                 SpecialtyCard(
                   imagePath: 'assests/img/specialities.png',
-                  headline: 'Dermatology',
-                  subText: 'Skin Specialist',
+                  headline: 'Dr. Siddhartha Mukherjee',
+                  subText: 'Renowned oncologist',
                 ),
                 SpecialtyCard(
                   imagePath: 'assests/img/specialities.png',
-                  headline: 'Cardiology',
-                  subText: 'Heart Specialist',
+                  headline: 'Dr. Patrick Soon-Shiong',
+                  subText: 'Leading oncologist',
                 ),
                 SpecialtyCard(
                   imagePath: 'assests/img/specialities.png',
-                  headline: 'Neurology',
-                  subText: 'Brain Specialist',
+                  headline: 'Dr. José Baselga',
+                  subText: 'Oncologist Specialist',
                 ),
                 SpecialtyCard(
                   imagePath: 'assests/img/specialities.png',
-                  headline: 'Orthopedics',
-                  subText: 'Bone Specialist',
+                  headline: 'Dr. Paul Bunn',
+                  subText: 'Professor of Onocologist',
                 ),
                 SpecialtyCard(
                   imagePath: 'assests/img/specialities.png',
-                  headline: 'Pediatrics',
-                  subText: 'Child Specialist',
+                  headline: 'Dr. Nancy Davidson',
+                  subText: 'Director of the UPMC',
                 ),
                 SpecialtyCard(
                   imagePath: 'assests/img/specialities.png',
-                  headline: 'Ophthalmology',
-                  subText: 'Eye Specialist',
+                  headline: 'Dr. James Allison',
+                  subText: 'Nobel Prize winner',
                 ),
               ],
             ),
@@ -136,7 +128,7 @@ class FilterButton extends StatelessWidget {
   }
 }
 
-class SpecialtyCard extends StatelessWidget {
+class SpecialtyCard extends StatefulWidget {
   final String imagePath;
   final String headline;
   final String subText;
@@ -146,6 +138,13 @@ class SpecialtyCard extends StatelessWidget {
     required this.headline,
     required this.subText,
   });
+
+  @override
+  _SpecialtyCardState createState() => _SpecialtyCardState();
+}
+
+class _SpecialtyCardState extends State<SpecialtyCard> {
+  bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -171,7 +170,7 @@ class SpecialtyCard extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
-                            imagePath,
+                            widget.imagePath,
                             width: 80,
                             height: 80,
                             fit: BoxFit.cover,
@@ -183,22 +182,26 @@ class SpecialtyCard extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                headline,
+                                widget.headline,
                                 style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                subText,
+                                widget.subText,
                                 style: TextStyle(
                                     fontSize: 14, color: Colors.grey),
                               ),
                               SizedBox(height: 5),
                               Row(
-                                children: List.generate(5, (index) {
-                                  return Icon(Icons.star,
-                                      size: 16, color: Colors.amber);
-                                }),
+                                children: [
+                                  ...List.generate(1, (index) {
+                                    return Icon(Icons.star,
+                                        size: 16, color: Colors.amber);
+                                  }),
+                                  SizedBox(width: 4),
+                                  Text('4.9 (122 reviews)', style: TextStyle(fontSize: 12, color: Colors.grey)),
+                                ],
                               ),
                             ],
                           ),
@@ -209,26 +212,44 @@ class SpecialtyCard extends StatelessWidget {
                       top: 0,
                       right: 0,
                       child: IconButton(
-                        icon: Icon(Icons.favorite_border, color: Colors.red),
+                        icon: Icon(
+                          isFavorite ? Icons.favorite : Icons.favorite_border,
+                          color: isFavorite ? Colors.red : Color(0xFF059B85),
+                        ),
                         onPressed: () {
-                          // Add to favorite functionality
+                          setState(() {
+                            isFavorite = !isFavorite;
+                          });
                         },
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
                 Row(
                   children: [
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text('Button 1'),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
+                          backgroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
+                            side: BorderSide(color: Colors.grey, width: 0.5),
                           ),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.videocam, color: Colors.grey),
+                            SizedBox(width: 4),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Consultation', style: TextStyle(fontSize: 12, color: const Color.fromARGB(255, 37, 37, 37))),
+                                Text('Mon-Wed 7PM to 11PM', style: TextStyle(fontSize: 8, color: Color.fromARGB(255, 90, 90, 90))),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -236,18 +257,31 @@ class SpecialtyCard extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text('Button 2'),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue,
+                          backgroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
+                            side: BorderSide(color: Colors.grey, width: 0.5),
                           ),
+                        ),
+                        child: Row(
+                          children: [
+                            Image.asset('assests/img/badar.png', width: 40, height: 40),
+                            SizedBox(width: 4),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Badar Ul..', style: TextStyle(fontSize: 12, color: const Color.fromARGB(255, 37, 37, 37))),
+                                Text('M, Tu, St, Sn', style: TextStyle(fontSize: 10, color: const Color.fromARGB(255, 90, 90, 90))),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                
                 ElevatedButton(
                   onPressed: () {},
                   child: Center(
